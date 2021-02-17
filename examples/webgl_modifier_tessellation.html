@@ -91,7 +91,7 @@
 
 					font: font,
 
-					size: 25,
+					size: 40,
 					height: 5,
 					curveSegments: 3,
 
@@ -121,8 +121,8 @@
 					const index = 9 * f;
 
 					const h = 0.5;
-					const s = 0.6 + 0.1 * Math.random();
-					const l = 0.6 + 0.1 * Math.random();
+					const s = 0.2 + 0.3 * Math.random();
+					const l = 0.2 + 0.3 * Math.random();
 
 					color.setHSL( h, s, l );
 
@@ -177,11 +177,11 @@
 				controls = new TrackballControls( camera, renderer.domElement );
 
 				stats = new Stats();
-				container.appendChild( stats.dom );
+				//container.appendChild( stats.dom );
 
 				//
 
-				window.addEventListener( 'resize', onWindowResize );
+				//window.addEventListener( 'resize', onWindowResize );
 
 			}
 
