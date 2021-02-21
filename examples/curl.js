@@ -155,8 +155,8 @@ var variables = {
 	//The step controls the zoom of the noise field. A large value creates bigger vortices, a smaller value leads to more features
 	step: initial_step,
 	particle_size: 1.5,
-	rainbow: true,
-	colour: '#ff9500'
+	rainbow: false,
+	colour: '#a263cf'
 }
 var reset_button = { reset:function(){
 		variables.speed = 0.5;
