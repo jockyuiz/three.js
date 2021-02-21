@@ -159,10 +159,10 @@ var variables = {
 	colour: '#e3cef2'
 }
 var reset_button = { reset:function(){
-		variables.speed = 0.5;
+		variables.speed = 0.23;
 		variables.step = initial_step;
-		variables.particle_size = 1.5;
-		variables.rainbow = true;
+		variables.particle_size = 0.2;
+		variables.rainbow = false;
 		variables.fade = 0.005;
 		ctx.fillStyle = "rgb(17,27,68)";
 		ctx.fillRect(0,0,canvas_1.width, canvas_1.height);
