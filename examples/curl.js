@@ -145,16 +145,16 @@ var initial_step;
 if(mobile){
 	initial_step = 300;
 }else{
-	initial_step = 1000;
+	initial_step = 710;
 }
 
 //Different values for velocity, colour etc.
 var variables = {
-	speed: 0.5,
+	speed: 0.23,
 	fade: 0.01,
 	//The step controls the zoom of the noise field. A large value creates bigger vortices, a smaller value leads to more features
 	step: initial_step,
-	particle_size: 1.5,
+	particle_size: 0.2,
 	rainbow: false,
 	colour: '#e3cef2'
 }
@@ -163,7 +163,7 @@ var reset_button = { reset:function(){
 		variables.step = initial_step;
 		variables.particle_size = 1.5;
 		variables.rainbow = true;
-		variables.fade = 0.01;
+		variables.fade = 0.005;
 		ctx.fillStyle = "rgb(17,27,68)";
 		ctx.fillRect(0,0,canvas_1.width, canvas_1.height);
 	}};
@@ -214,14 +214,12 @@ if(!mobile){
 }
 gui.add(variables, 'speed').min(0.0).max(1.0).step(0.01).listen();
 gui.add(variables, 'particle_size').min(0.1).max(5).step(0.1).listen();
-gui.add(variables, 'fade').min(0.01).max(1.0).step(0.01).listen();
+gui.add(variables, 'fade').min(0.00).max(1.0).step(0.005).listen();
 gui.addColor(variables, 'colour').listen().onChange(function(value) { variables.rainbow = false;} );
-gui.add(this, 'flow');
-gui.add(random_button,'random');
 gui.add(reset_button,'reset');
 gui.add(clear_button,'clear');
 gui.close();
-variables.fade = 0.01;
+variables.fade = 0.005;
 
 ctx.fillStyle = "rgb(17,27,68)";
 ctx.fillRect(0,0,canvas_1.width, canvas_1.height);
